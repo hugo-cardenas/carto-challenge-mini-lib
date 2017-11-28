@@ -1,8 +1,7 @@
-import L from 'leaflet';
-import validateConfig from './configValidator';
-import { getGroupId } from './carto';
-
-import { LAYER_TILED, LAYER_CARTO } from './layerTypes';
+const L = require('leaflet');
+const validateConfig = require('./configValidator').default;
+const { getGroupId } = require('./carto');
+const { LAYER_TILED, LAYER_CARTO } = require('./layerTypes');
 
 const createMap = async(id, config) => {
     validateConfig(config);
@@ -90,4 +89,4 @@ const createCartoLayer = async config => {
 
 const createTileLayer = (urlTemplate, options = {}) => L.tileLayer(urlTemplate, options);
 
-export default createMap;
+module.exports = createMap;
