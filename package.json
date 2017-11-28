@@ -1,0 +1,27 @@
+{
+  "name": "mini-carto",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --config ./config/webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": "Mini Carto challenge - library",
+  "main": "dist/index.js",
+  "author": "Hugo Cárdenas",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "uglifyjs-webpack-plugin": "^1.1.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "joi-browser": "^13.0.1",
+    "leaflet": "^1.2.0"
+  }
+}
