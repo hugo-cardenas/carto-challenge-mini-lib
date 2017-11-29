@@ -39,10 +39,8 @@ export const getGroupId = async config => {
 };
 
 const buildPayload = layers => {
-    const foo = [layers[0], layers[1]];
-
     return {
-        layers: foo.map(layer => {
+        layers: layers.map(layer => {
             const options = layer.options;
             if (layer.type === LAYER_TILED) {
                 return {
