@@ -57,19 +57,16 @@ const createMap = async(id, config) => {
                 hide: () => hideLayer(i),
                 show: () => showLayer(i)
             };
+
+            // TODO Improve SOLIDity of this part of the API
+            // Maybe refactor into 2 dif. methods - getLayers (with only hide and show) and getSQLLayers (with setSQL)
             if (config.layers[i].type === LAYER_CARTO) {
                 layer.setSQL = sql => setSQL(i, sql)
             }
             return layer;
         });
 
-    // TODO Validate index
-    const getLayer = i => getLayers()[i];
-
-    return {
-        getLayers,
-        getLayer
-    };
+    return { getLayers };
 };
 
 const createBasicLayer = options => {
